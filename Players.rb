@@ -1,11 +1,15 @@
 class Players
-  attr_accessor :name :turn :life
+  attr_accessor :name, :turn, :lives
   def initialize(name)
     self.turn = false
     self.name = name
-    self.life = life
+    self.lives = 3
   end
-  def decrease_life
-    life -= 1
+  def decrease_lives
+    if self.lives > 1
+      self.lives -= 1
+    else
+      self.lives = 0
+    end
   end
 end

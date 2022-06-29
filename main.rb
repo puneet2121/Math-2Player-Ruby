@@ -1,5 +1,6 @@
 require './Game'
 require './Players'
-require './Question'
-player1 = Players.new('bb')
-puts player1.name
+
+player1 = Players.new('Alice')
+player2 = Players.new('bob')
+game = Game.new(player1,player2)
